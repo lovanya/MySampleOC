@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DependentComponnetPickerViewController.h
 //  Pickers
 //
 //  Created by Bruce on 16/5/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITabBarController
-
+@interface DependentComponnetPickerViewController : UIViewController
 
 @end
-

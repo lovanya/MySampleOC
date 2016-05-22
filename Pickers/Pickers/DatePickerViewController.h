@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DatePickerViewController.h
 //  Pickers
 //
 //  Created by Bruce on 16/5/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITabBarController
-
+@interface DatePickerViewController : UIViewController
 
 @end
-

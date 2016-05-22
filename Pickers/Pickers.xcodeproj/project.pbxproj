@@ -15,6 +15,11 @@
 		3264202E1CF1A71B00791980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3264202C1CF1A71B00791980 /* LaunchScreen.storyboard */; };
 		326420391CF1A71B00791980 /* PickersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420381CF1A71B00791980 /* PickersTests.m */; };
 		326420441CF1A71B00791980 /* PickersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420431CF1A71B00791980 /* PickersUITests.m */; };
+		326420531CF1A7F700791980 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420521CF1A7F700791980 /* DatePickerViewController.m */; };
+		326420561CF1A84C00791980 /* SingleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420551CF1A84C00791980 /* SingleComponentPickerViewController.m */; };
+		326420591CF1A87300791980 /* DoubleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420581CF1A87300791980 /* DoubleComponentPickerViewController.m */; };
+		3264205C1CF1A8A300791980 /* DependentComponnetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264205B1CF1A8A300791980 /* DependentComponnetPickerViewController.m */; };
+		3264205F1CF1A8BA00791980 /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264205E1CF1A8BA00791980 /* CustomPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		3264203F1CF1A71B00791980 /* PickersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		326420431CF1A71B00791980 /* PickersUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickersUITests.m; sourceTree = "<group>"; };
 		326420451CF1A71B00791980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		326420511CF1A7F700791980 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		326420521CF1A7F700791980 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		326420541CF1A84C00791980 /* SingleComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleComponentPickerViewController.h; sourceTree = "<group>"; };
+		326420551CF1A84C00791980 /* SingleComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleComponentPickerViewController.m; sourceTree = "<group>"; };
+		326420571CF1A87300791980 /* DoubleComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleComponentPickerViewController.h; sourceTree = "<group>"; };
+		326420581CF1A87300791980 /* DoubleComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleComponentPickerViewController.m; sourceTree = "<group>"; };
+		3264205A1CF1A8A300791980 /* DependentComponnetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependentComponnetPickerViewController.h; sourceTree = "<group>"; };
+		3264205B1CF1A8A300791980 /* DependentComponnetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependentComponnetPickerViewController.m; sourceTree = "<group>"; };
+		3264205D1CF1A8BA00791980 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
+		3264205E1CF1A8BA00791980 /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +116,8 @@
 		3264201D1CF1A71B00791980 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				326420511CF1A7F700791980 /* DatePickerViewController.h */,
+				326420521CF1A7F700791980 /* DatePickerViewController.m */,
 				326420211CF1A71B00791980 /* AppDelegate.h */,
 				326420221CF1A71B00791980 /* AppDelegate.m */,
 				326420241CF1A71B00791980 /* ViewController.h */,
@@ -110,6 +127,14 @@
 				3264202C1CF1A71B00791980 /* LaunchScreen.storyboard */,
 				3264202F1CF1A71B00791980 /* Info.plist */,
 				3264201E1CF1A71B00791980 /* Supporting Files */,
+				326420541CF1A84C00791980 /* SingleComponentPickerViewController.h */,
+				326420551CF1A84C00791980 /* SingleComponentPickerViewController.m */,
+				326420571CF1A87300791980 /* DoubleComponentPickerViewController.h */,
+				326420581CF1A87300791980 /* DoubleComponentPickerViewController.m */,
+				3264205A1CF1A8A300791980 /* DependentComponnetPickerViewController.h */,
+				3264205B1CF1A8A300791980 /* DependentComponnetPickerViewController.m */,
+				3264205D1CF1A8BA00791980 /* CustomPickerViewController.h */,
+				3264205E1CF1A8BA00791980 /* CustomPickerViewController.m */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -270,9 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326420561CF1A84C00791980 /* SingleComponentPickerViewController.m in Sources */,
+				326420591CF1A87300791980 /* DoubleComponentPickerViewController.m in Sources */,
+				326420531CF1A7F700791980 /* DatePickerViewController.m in Sources */,
 				326420261CF1A71B00791980 /* ViewController.m in Sources */,
 				326420231CF1A71B00791980 /* AppDelegate.m in Sources */,
 				326420201CF1A71B00791980 /* main.m in Sources */,
+				3264205C1CF1A8A300791980 /* DependentComponnetPickerViewController.m in Sources */,
+				3264205F1CF1A8BA00791980 /* CustomPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
