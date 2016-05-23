@@ -20,6 +20,7 @@
 		326420591CF1A87300791980 /* DoubleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420581CF1A87300791980 /* DoubleComponentPickerViewController.m */; };
 		3264205C1CF1A8A300791980 /* DependentComponnetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264205B1CF1A8A300791980 /* DependentComponnetPickerViewController.m */; };
 		3264205F1CF1A8BA00791980 /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264205E1CF1A8BA00791980 /* CustomPickerViewController.m */; };
+		32CFDB341CF355C1002F912D /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32CFDB331CF355C1002F912D /* statedictionary.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		3264205B1CF1A8A300791980 /* DependentComponnetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependentComponnetPickerViewController.m; sourceTree = "<group>"; };
 		3264205D1CF1A8BA00791980 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
 		3264205E1CF1A8BA00791980 /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewController.m; sourceTree = "<group>"; };
+		32CFDB331CF355C1002F912D /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		3264201D1CF1A71B00791980 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				32CFDB331CF355C1002F912D /* statedictionary.plist */,
 				326420511CF1A7F700791980 /* DatePickerViewController.h */,
 				326420521CF1A7F700791980 /* DatePickerViewController.m */,
 				326420211CF1A71B00791980 /* AppDelegate.h */,
@@ -270,6 +273,7 @@
 			files = (
 				3264202E1CF1A71B00791980 /* LaunchScreen.storyboard in Resources */,
 				3264202B1CF1A71B00791980 /* Assets.xcassets in Resources */,
+				32CFDB341CF355C1002F912D /* statedictionary.plist in Resources */,
 				326420291CF1A71B00791980 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

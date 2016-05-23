@@ -63,7 +63,7 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjW-gN-UQC">
                                 <rect key="frame" x="140" y="20" width="320" height="216"/>
                                 <connections>
-                                    <outlet property="delegate" destination="kfd-7h-rfU" id="eQo-b8-DJg"/>
+                                    <outlet property="delegate" destination="1lM-er-m8p" id="Lmm-KR-TN5"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmv-3l-ylf">
@@ -102,9 +102,33 @@
                     <view key="view" contentMode="scaleToFill" id="Zsz-tF-MIb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQm-5L-692">
+                                <rect key="frame" x="140" y="20" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6NC-XN-k9F" id="tAI-m3-44k"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-2b-Hdy">
+                                <rect key="frame" x="278" y="244" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="6NC-XN-k9F" eventType="touchUpInside" id="opH-X2-tr6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sQm-5L-692" firstAttribute="top" secondItem="VfO-je-WMv" secondAttribute="bottom" id="Bbr-Sh-AtZ"/>
+                            <constraint firstItem="DaG-2b-Hdy" firstAttribute="top" secondItem="sQm-5L-692" secondAttribute="bottom" constant="8" id="XPD-ox-FW6"/>
+                            <constraint firstItem="DaG-2b-Hdy" firstAttribute="centerX" secondItem="Zsz-tF-MIb" secondAttribute="centerX" id="dCX-LN-0wk"/>
+                            <constraint firstItem="sQm-5L-692" firstAttribute="centerX" secondItem="Zsz-tF-MIb" secondAttribute="centerX" id="lGY-Fd-XVz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dependent" image="dependenticon" id="Xpf-Zl-SoP"/>
+                    <connections>
+                        <outlet property="dependentPicker" destination="sQm-5L-692" id="2qD-Ly-SGt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORg-0e-lym" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
