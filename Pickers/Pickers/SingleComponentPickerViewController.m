@@ -38,7 +38,9 @@
 */
 - (IBAction)buttonPressed:(id)sender {
     NSInteger row = [self.singlePicker selectedRowInComponent:0];
+   // NSInteger row2 = [self.singlePicker selectedRowInComponent:1];
     NSString *selected = self.characterNames[row];
+    //NSString *selected2 = self.characterNames[row2];
     NSString *title = [[NSString alloc ] initWithFormat:@"You selected %@",selected];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:@"Thank  you for choosing." preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"You are welcome!" style:UIAlertActionStyleDefault handler:nil];
@@ -47,12 +49,12 @@
     [self presentViewController:alert animated:YES completion:nil];
     
 }
-
+#pragma -
 #pragma mark Picker Data Source Methods
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView{
     return 1;
 }
-
+// rows of picker
 -(NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component {
     return [self.characterNames count];
 }

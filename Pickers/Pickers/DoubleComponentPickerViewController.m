@@ -8,7 +8,14 @@
 
 #import "DoubleComponentPickerViewController.h"
 
+#define kFillingComponent 0
+#define kBreadComponent 1
+
 @interface DoubleComponentPickerViewController ()
+
+@property (weak, nonatomic) IBOutlet UIPickerView *doublePicker;
+@property (strong,nonatomic) NSArray *fillingTypes;
+@property (strong,nonatomic) NSArray *breadTypes;
 
 @end
 
@@ -33,5 +40,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)buttonPressed:(id)sender {
+    NSInteger fillingRow = [self.doublePicker selectedRowInComponent:0];
+    NSInteger breadRow = [self.doublePicker selectedRowInComponent:1];
+    NSString *filling = self.fillingTypes[fillingRow];
+    NSString *bread = self.breadTypes[breadRow];
+    NSString *message = [[NSString alloc] initWithFormat: @"Your %@ on %@ bread will be right up.",filling,bread];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Thank for your order" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Great!" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end
