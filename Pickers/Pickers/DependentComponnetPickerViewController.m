@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //get the resources in Resources
     NSBundle *bundle = [NSBundle mainBundle];
     NSURL *plistURL = [bundle URLForResource:@"statedictionary" withExtension:@"plist"];
     self.stateZips = [NSDictionary dictionaryWithContentsOfURL:plistURL];
