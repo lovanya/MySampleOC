@@ -228,6 +228,7 @@
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="BS8-nX-rvg"/>
                     <connections>
                         <outlet property="picker" destination="M93-CG-du7" id="ozd-fz-J9G"/>
+                        <outlet property="spinButton" destination="8Ya-bP-aYL" id="rCD-v2-fQx"/>
                         <outlet property="winLabel" destination="J16-ve-bXX" id="FEX-IE-Jxi"/>
                     </connections>
                 </viewController>

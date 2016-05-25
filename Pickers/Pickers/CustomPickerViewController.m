@@ -12,7 +12,15 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @property (weak, nonatomic) IBOutlet UILabel *winLabel;
-@property (strong,nonatomic) NSArray *images;
+@property (weak, nonatomic) IBOutlet UIButton *spinButton;
+@property (strong,nonatomic) NSMutableArray *images;
+
+@property (strong,nonatomic) NSTimer *paintingTimer;
+
+@property (strong,nonatomic) NSMutableArray *numInRow;
+
+@property (readwrite,nonatomic) int num;
+
 
 @end
 
@@ -22,12 +30,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.images = @[[UIImage imageNamed:@"seven"],
-               [UIImage imageNamed:@"bar"],
-               [UIImage imageNamed:@"crown"],
-               [UIImage imageNamed:@"cherry"],
-               [UIImage imageNamed:@"lemon"],
-               [UIImage imageNamed:@"apple"]
-               ];
+                    [UIImage imageNamed:@"bar"],
+                    [UIImage imageNamed:@"crown"],
+                    [UIImage imageNamed:@"cherry"],
+                    [UIImage imageNamed:@"lemon"],
+                    [UIImage imageNamed:@"apple"]
+                    ];
     self.winLabel.text = @" ";//注意引号之间的空格
 }
 
@@ -37,55 +45,73 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 - (IBAction)spin:(id)sender {
-    BOOL win = NO;
-    int loopNum = 0;
-    NSString *dd = [[NSString alloc] init];
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:dd selector:@selector(run:) userInfo:nil repeats:YES];
+    self.spinButton.enabled = NO;
+    self.num = 1;
+    self.numInRow = [[NSMutableArray alloc] initWithObjects:self.images[0],self.images[0],self.images[0],self.images[0],self.images[0],nil];
+    [self startPainting];//开始定时器
+    [self performSelector:@selector(stopPainting) withObject:nil afterDelay:2.3];
     
-//    if([dd retainCount] == 6){
-//        [timer invalidate];
-//    }
-    if([self run] >= 3){
-        win = YES;
-    }
-    
-    if(win){
-        self.winLabel.text = @"WINNER!";
-    }else{
-        self.winLabel.text = @" ";//注意引号之间的空格
-    }
 }
 
--(int) run {
-    int numInRow = 1;
-    int lastVal = -1;
+-(void) run {
     
     for(int i = 0; i < 5 ; i ++){
         int newValue = arc4random_uniform((uint)[self.images count]);
-        
-        if(newValue == lastVal){
-            numInRow++;
-        }else{
-            numInRow = 1;
-        }
-        
-        lastVal = newValue;
-        
+
         [self.picker selectRow:newValue inComponent:i animated:YES];
+        [self.numInRow replaceObjectAtIndex:i withObject:self.images[newValue]];
         [self.picker reloadComponent:i];
         
     }
-    return numInRow;
 }
+
+// 定时器执行的方法
+- (void)paint:(NSTimer *)paramTimer{
+    [self run];
+}
+
+// 开始定时器
+- (void) startPainting{
+    // 定义一个NSTimer
+    self.paintingTimer = [NSTimer scheduledTimerWithTimeInterval:0.5                   target:self selector:@selector(paint:)  userInfo:nil repeats:YES];
+}
+
+// 停止定时器
+- (void) stopPainting{
+    if (self.paintingTimer != nil){
+        // 定时器调用invalidate后，就会自动执行release方法。不需要在显示的调用release方法
+        [self.paintingTimer invalidate];
+    }
+    
+    UIImage *lastValue;
+    for(UIImage *dic in self.numInRow){
+        
+        if(lastValue == dic){
+            self.num++;
+        }else if(self.num >=3){
+            
+        }else{
+            self.num = 1;
+        }
+        lastValue = dic;
+    }
+    if(self.num >=3){
+        self.winLabel.text = @"WINNER!";
+    }else{
+        self.winLabel.text = [[NSString alloc] initWithFormat:@"%d",self.num];
+    }
+    self.spinButton.enabled = YES;
+}
+
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView{
     return 5;
 }
