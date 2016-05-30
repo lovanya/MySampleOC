@@ -20,6 +20,8 @@
 		326420561CF1A84C00791980 /* SingleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420551CF1A84C00791980 /* SingleComponentPickerViewController.m */; };
 		326420591CF1A87300791980 /* DoubleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326420581CF1A87300791980 /* DoubleComponentPickerViewController.m */; };
 		3264205C1CF1A8A300791980 /* DependentComponnetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3264205B1CF1A8A300791980 /* DependentComponnetPickerViewController.m */; };
+		32B423D71CFC86CA00EBE151 /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 32B423D51CFC86CA00EBE151 /* crunch.wav */; };
+		32B423D81CFC86CA00EBE151 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 32B423D61CFC86CA00EBE151 /* win.wav */; };
 		32CFDB341CF355C1002F912D /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32CFDB331CF355C1002F912D /* statedictionary.plist */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		3264205A1CF1A8A300791980 /* DependentComponnetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependentComponnetPickerViewController.h; sourceTree = "<group>"; };
 		3264205B1CF1A8A300791980 /* DependentComponnetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependentComponnetPickerViewController.m; sourceTree = "<group>"; };
 		3264205D1CF1A8BA00791980 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
+		32B423D51CFC86CA00EBE151 /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crunch.wav; sourceTree = "<group>"; };
+		32B423D61CFC86CA00EBE151 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		32CFDB331CF355C1002F912D /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				32CFDB331CF355C1002F912D /* statedictionary.plist */,
+				32B423D51CFC86CA00EBE151 /* crunch.wav */,
+				32B423D61CFC86CA00EBE151 /* win.wav */,
 				326420511CF1A7F700791980 /* DatePickerViewController.h */,
 				326420521CF1A7F700791980 /* DatePickerViewController.m */,
 				326420211CF1A71B00791980 /* AppDelegate.h */,
@@ -272,8 +278,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32B423D71CFC86CA00EBE151 /* crunch.wav in Resources */,
 				3264202E1CF1A71B00791980 /* LaunchScreen.storyboard in Resources */,
 				3264202B1CF1A71B00791980 /* Assets.xcassets in Resources */,
+				32B423D81CFC86CA00EBE151 /* win.wav in Resources */,
 				32CFDB341CF355C1002F912D /* statedictionary.plist in Resources */,
 				326420291CF1A71B00791980 /* Main.storyboard in Resources */,
 			);
