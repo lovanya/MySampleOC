@@ -28,7 +28,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(section == 0){
@@ -43,11 +43,28 @@
     static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: SimpleTableIdentifier];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:SimpleTableIdentifier];
     }
     
+    UIImage *image = [UIImage imageNamed:@"star"];
+    cell.imageView.image = image;
+    UIImage *highlightedImage =[UIImage imageNamed:@"star2"];
+    cell.imageView.highlightedImage = highlightedImage;
+    
+//    cell.backgroundColor = [UIColor blackColor];
+//    
+//    cell.textLabel.textColor = [UIColor whiteColor];
+//    cell.textLabel.highlightedTextColor = [UIColor blackColor];
     cell.textLabel.text = self.dwarves[indexPath.row];
+    
+    if(indexPath.row < 7){
+        cell.detailTextLabel.text = @"Mr.Disney";
+    } else {
+        cell.detailTextLabel.text = @"Mr.Tolkien";
+    }
     return cell;
 }
+
+
 
 @end
