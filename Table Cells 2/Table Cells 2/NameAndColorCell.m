@@ -21,11 +21,13 @@
     }
 }
 
+
 -(void)setColor:(NSString *)c{
     if(![c isEqualToString:_color]){
         _color = [c copy];
         self.colorLabel.text = _color;
     }
 }
+
 
 @end
