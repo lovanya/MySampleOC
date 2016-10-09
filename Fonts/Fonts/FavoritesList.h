@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface FavoritesList : NSObject
-
 +(instancetype)sharedFavoritesList;
 -(NSArray *)favorites;
 -(void)addFavorite:(id)item;

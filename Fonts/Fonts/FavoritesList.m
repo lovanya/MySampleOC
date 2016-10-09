@@ -19,9 +19,9 @@
 +(instancetype)sharedFavoritesList{
     static FavoritesList *shared = nil;
     static dispatch_once_t onceToken;
-    dispatch_once(onceToken,^{
+    dispatch_once(&onceToken, ^{
         shared = [[self alloc] init];
-    })
+    });
     return shared;
 }
 
@@ -29,19 +29,20 @@
     self = [super init];
     if(self){
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSArray *storedFavorites = [defaults objectForkey:@"favorites"];
+        NSArray *storedFavorites = [defaults objectForKey:@"favorites"];
         if (storedFavorites) {
-            self.favorites = [storedFavorites mutableCopy];
+            self.favorites = [storedFavorites mutableCopy];				
         } else {
-            self.favorites  = [NSmutableArray array];
+            self.favorites  = [NSMutableArray array];
         }
-        return self;
     }
+    return self;
 }
 
 -(void) addFavorite:(id)item {
     [_favorites insertObject: item atIndex:0];
     [self saveFavorites];
+    
 }
 
 -(void) removeFavorite:(id)item{
