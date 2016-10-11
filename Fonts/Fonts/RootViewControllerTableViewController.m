@@ -72,10 +72,7 @@
     }
 }
 
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-//    return cell.frame.size.height;
-//}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *FamilyNameCell = @"FamilyName";
     static NSString *FavoritesCell = @"Favorites";
@@ -92,5 +89,11 @@
     
     return cell;
 }
-
+//height auto adjust
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+//    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+//    CGSize size =  [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    CGFloat h = size.height +1;
+    return 44;
+}
 @end
