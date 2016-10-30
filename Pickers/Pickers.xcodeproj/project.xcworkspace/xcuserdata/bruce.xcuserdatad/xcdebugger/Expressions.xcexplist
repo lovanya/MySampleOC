@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[CustomPickerViewController spin:]:CustomPickerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[NSBundle mainBundle] pathForResource:@&quot;win&quot; ofType:@&quot;wav&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
